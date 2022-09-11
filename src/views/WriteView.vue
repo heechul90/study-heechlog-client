@@ -2,16 +2,22 @@
 import {ref} from "vue";
 
 import axios from 'axios';
+import {useRouter} from "vue-router";
 
 const title = ref("");
 const content = ref("");
 
-const write = function () {
-  axios.post("/api/posts", {
-    title: title.value,
-    content: content.value
-  })
+const router = useRouter();
 
+const write = function () {
+  axios
+      .post("/api/posts", {
+        title: title.value,
+        content: content.value
+      })
+      .then(() => {
+        router.replace({name: "home"})
+      });
 };
 
 </script>
@@ -32,6 +38,6 @@ const write = function () {
 
 </template>
 
-<style>
+<style scoped>
 
 </style>
