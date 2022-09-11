@@ -7,10 +7,12 @@ const router = useRouter();
 
 const posts = ref([]);
 
-axios.get("/api/posts").then((response) => {
-  response.data.data.forEach(function (row:any) {
-    posts.value.push(row);
-  });
+axios
+    .get("/api/posts")
+    .then((response) => {
+      response.data.data.forEach(function (row:any) {
+        posts.value.push(row);
+      });
 });
 
 </script>
