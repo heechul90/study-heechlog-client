@@ -7,7 +7,7 @@ const title = ref("");
 const content = ref("");
 
 const write = function () {
-  axios.post("http://localhost:9000/api/posts", {
+  axios.post("/api/posts", {
     title: title.value,
     content: content.value
   })
