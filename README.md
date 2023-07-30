@@ -5,7 +5,7 @@
 ### server
 [[히치로그서버]](https://github.com/heechul90/study-heechlog-server)
 
-### client
+### client (지금 여기에 있습니다)
 [[히치프론트]](https://github.com/heechul90/study-heechlog-client) 👈 <br/>
 
 ---
